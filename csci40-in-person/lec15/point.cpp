@@ -42,3 +42,8 @@ void Point::setX(double d) {
 void Point::setY(double d) {
   y = d;
 }
+
+void Point::reset() {
+  double x = 0.0;
+  double y = 0.0;
+}

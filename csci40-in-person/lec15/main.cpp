@@ -32,9 +32,20 @@ void testScale() {
   assertTrue(q.getX() == 5.0 && q.getY() == 7.0, "scale");
 }
 
+void testReset() {
+  Point q;
+  q.setX(2.5);
+  q.setY(3.5);
+  q.reset();
+
+  cout << q.getX() << " " << q.getY() << endl;
+  assertTrue(q.getX() == 0.0 && q.getY() == 0.0, "reset");
+}
+
 int main() {
   testNegate();
   testScale();
+  testReset();
   
   /*
   Point p = {2, 3}; // (2, 3)

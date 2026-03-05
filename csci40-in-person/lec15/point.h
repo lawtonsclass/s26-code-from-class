@@ -16,6 +16,9 @@ class Point {
     void setX(double d);
     void setY(double d);
 
+    // crushed ice
+    void reset();
+
   private:
     // cannot be accessed by the user
     double x;
