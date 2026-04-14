@@ -1,8 +1,13 @@
 #include <iostream>
+#include <stdexcept>
 using namespace std;
 
 // return n!
 int fact(int n) {
+  if (n < 1) {
+    throw runtime_error("Can't calculate the factorial of numbers < 1 :(");
+  }
+
   if (n == 1) {
     // base case: 1! = 1
     return 1;
@@ -12,19 +17,13 @@ int fact(int n) {
   }
 }
 
-int fact_iterative(int n) {
-  int product = 1;
-
-  for (int i = n; i >= 1; i--) {
-    product *= i;
-  }
-
-  return product;
-}
-
 int main() {
-  cout << fact(5) << endl;
-  cout << fact_iterative(5) << endl;
+  try {
+    cout << fact(5) << endl;
+    cout << fact(-1) << endl;
+  } catch (runtime_error& e) {
+    cout << e.what() << endl;
+  }
 
   return 0;
 }
