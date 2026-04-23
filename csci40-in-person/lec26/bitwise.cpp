@@ -20,5 +20,16 @@ int main() {
   cout << (~9) << endl;
   cout << negate_2s_complement(9) << endl;
 
+  cout << endl;
+
+  cout << (11 ^ 5) << endl;
+
+  cout << endl;
+
+  cout << (11 << 2) << endl;
+  cout << (5 >> 1) << endl;
+  cout << (11 & (1 << 3)) << endl;  // because the result wasn't 0, bit 3 was set
+  cout << (10 | (1 << 0)) << endl;  // makes sure that the 0th bit is set
+
   return 0;
 }
